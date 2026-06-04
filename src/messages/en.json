@@ -1,0 +1,12 @@
+{
+  "home-page": {
+    "title": "english",
+    "description": "english"
+  },
+  "nav": {
+    "components": "Components",
+    "blocks": "blocks",
+    "layouts": "layouts",
+    "docs": "docs"
+  }
+}
