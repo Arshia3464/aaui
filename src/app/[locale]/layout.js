@@ -12,6 +12,12 @@ const vazirmatn = localFont({
   display: "swap",
 });
 
+export const metadata = {
+  title: "AAUI | کتابخانه کامپوننت‌های مدرن",
+  description:
+    "مجموعه‌ای از کامپوننت‌ها، بلاک‌ها و لایه‌بندی‌های مدرن برای ساخت سریع رابط‌های کاربری حرفه‌ای با Next.js و Tailwind CSS.",
+};
+
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fa" }];
 }
