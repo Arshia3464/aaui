@@ -1,43 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const features = [
-  {
-    title: "Browse Ready Components",
-    description:
-      "Explore a growing collection of reusable UI components and modern interface patterns built for real-world applications.",
-    image: "/image.png",
-  },
-
-  {
-    title: "Customize Everything",
-    description:
-      "Easily modify layouts, animations, spacing and themes to perfectly match your project and design system.",
-    image: "/image.png",
-  },
-
-  {
-    title: "Built For Production",
-    description:
-      "Responsive, scalable and optimized components designed with clean architecture and modern frontend practices.",
-    image: "/image.png",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function FeaturesSection() {
+  const t = useTranslations("features");
+
+  const features = [
+    {
+      title: t("items.0.title"),
+      description: t("items.0.description"),
+      image: "/image.png",
+    },
+
+    {
+      title: t("items.1.title"),
+      description: t("items.1.description"),
+      image: "/image.png",
+    },
+
+    {
+      title: t("items.2.title"),
+      description: t("items.2.description"),
+      image: "/image.png",
+    },
+  ];
+
   return (
     <section className="relative z-10 mt-40">
       <div className="max-w-6xl mx-auto px-6">
         {/* section heading */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">
-            Designed For Modern Development
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-5">{t("title")}</h2>
 
           <p className="text-zinc-400 max-w-2xl mx-auto leading-8 text-lg">
-            Everything is built to help you create beautiful interfaces faster
-            without sacrificing flexibility or quality.
+            {t("description")}
           </p>
         </div>
 
@@ -61,7 +58,7 @@ export default function FeaturesSection() {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="inline-flex mb-6 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-4 py-1.5 text-sm text-zinc-300">
-                    Feature {index + 1}
+                    {t("feature")} {index + 1}
                   </div>
 
                   <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -85,10 +82,10 @@ export default function FeaturesSection() {
                   className="group relative"
                 >
                   {/* ambient glow */}
-                  <div className="absolute -inset-10 rounded-[40px] bg-gradient-to-r from-purple-500/20 via-cyan-500/10 to-blue-500/20 blur-3xl opacity-70" />
+                  <div className="absolute -inset-10 rounded-[40px] bg-linear-to-r from-purple-500/20 via-cyan-500/10 to-blue-500/20 blur-3xl opacity-70" />
 
                   {/* secondary soft glow */}
-                  <div className="absolute inset-0 rounded-3xl bg-white/[0.03]" />
+                  <div className="absolute inset-0 rounded-3xl bg-white/3" />
 
                   {/* image container */}
                   <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/60 backdrop-blur-xl shadow-2xl">
@@ -96,14 +93,14 @@ export default function FeaturesSection() {
                     <img
                       src={feature.image}
                       alt={feature.title}
-                      className="w-full h-[380px] object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-95 object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
                     {/* dark gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
 
                     {/* subtle top shine */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent opacity-60" />
                   </div>
                 </motion.div>
               </div>

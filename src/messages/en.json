@@ -3,6 +3,72 @@
     "title": "english",
     "description": "english"
   },
+  "features": {
+    "title": "Designed For Modern Development",
+
+    "description": "Everything is built to help you create beautiful interfaces faster without sacrificing flexibility or quality.",
+
+    "feature": "Feature",
+
+    "items": {
+      "0": {
+        "title": "Browse Ready Components",
+        "description": "Explore a growing collection of reusable UI components and modern interface patterns built for real-world applications."
+      },
+
+      "1": {
+        "title": "Customize Everything",
+        "description": "Easily modify layouts, animations, spacing and themes to perfectly match your project and design system."
+      },
+
+      "2": {
+        "title": "Built For Production",
+        "description": "Responsive, scalable and optimized components designed with clean architecture and modern frontend practices."
+      }
+    }
+  },
+  "tech-stack": {
+    "copy": "Copy",
+    "copied": "Copied",
+
+    "default": {
+      "name": "Modern Frontend Stack",
+      "description": "Built using a carefully selected modern frontend stack focused on performance, scalability, animations and developer experience. Hover over each technology to explore its role in the project.",
+      "code": "Reusable components • Smooth animations • Modern tooling"
+    },
+
+    "items": {
+      "javascript": {
+        "name": "JavaScript",
+        "description": "The language powering modern web applications and interactive user interfaces.",
+        "code": "const greeting = \"Hello World\";"
+      },
+
+      "react": {
+        "name": "React",
+        "description": "Component-based UI library used for building reusable and scalable interfaces.",
+        "code": "npm install react"
+      },
+
+      "nextjs": {
+        "name": "Next.js",
+        "description": "Production-ready React framework with routing, SSR and performance optimizations.",
+        "code": "npx create-next-app@latest"
+      },
+
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "description": "Utility-first CSS framework for rapidly building custom modern designs.",
+        "code": "npm install tailwindcss @tailwindcss/postcss postcss"
+      },
+
+      "framer": {
+        "name": "Framer Motion",
+        "description": "Animation library for React used to create fluid interactions and motion effects.",
+        "code": "npm install framer-motion"
+      }
+    }
+  },
   "nav": {
     "components": "Components",
     "blocks": "blocks",

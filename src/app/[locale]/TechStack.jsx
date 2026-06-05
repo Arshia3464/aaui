@@ -2,62 +2,59 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { FaJs, FaReact } from "react-icons/fa";
 
 import { SiFramer, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
-const stack = [
-  {
-    name: "JavaScript",
-    icon: FaJs,
-    description:
-      "The language powering modern web applications and interactive user interfaces.",
-    code: `const greeting = "Hello World";`,
-  },
-
-  {
-    name: "React",
-    icon: FaReact,
-    description:
-      "Component-based UI library used for building reusable and scalable interfaces.",
-    code: `npm install react`,
-  },
-
-  {
-    name: "Next.js",
-    icon: SiNextdotjs,
-    description:
-      "Production-ready React framework with routing, SSR and performance optimizations.",
-    code: `npx create-next-app@latest`,
-  },
-
-  {
-    name: "Tailwind CSS",
-    icon: SiTailwindcss,
-    description:
-      "Utility-first CSS framework for rapidly building custom modern designs.",
-    code: `npm install tailwindcss @tailwindcss/postcss postcss`,
-  },
-
-  {
-    name: "Framer Motion",
-    icon: SiFramer,
-    description:
-      "Animation library for React used to create fluid interactions and motion effects.",
-    code: `npm install framer-motion`,
-  },
-];
-
-const defaultInfo = {
-  name: "Modern Frontend Stack",
-  icon: null,
-  description:
-    "Built using a carefully selected modern frontend stack focused on performance, scalability, animations and developer experience. Hover over each technology to explore its role in the project.",
-  code: `Reusable components • Smooth animations • Modern tooling`,
-};
-
 export default function TechStack() {
+  const t = useTranslations("tech-stack");
+
+  const stack = [
+    {
+      name: t("items.javascript.name"),
+      icon: FaJs,
+      description: t("items.javascript.description"),
+      code: t("items.javascript.code"),
+    },
+
+    {
+      name: t("items.react.name"),
+      icon: FaReact,
+      description: t("items.react.description"),
+      code: t("items.react.code"),
+    },
+
+    {
+      name: t("items.nextjs.name"),
+      icon: SiNextdotjs,
+      description: t("items.nextjs.description"),
+      code: t("items.nextjs.code"),
+    },
+
+    {
+      name: t("items.tailwind.name"),
+      icon: SiTailwindcss,
+      description: t("items.tailwind.description"),
+      code: t("items.tailwind.code"),
+    },
+
+    {
+      name: t("items.framer.name"),
+      icon: SiFramer,
+      description: t("items.framer.description"),
+      code: t("items.framer.code"),
+    },
+  ];
+
+  const defaultInfo = {
+    name: t("default.name"),
+    icon: null,
+    description: t("default.description"),
+    code: t("default.code"),
+  };
+
   const [active, setActive] = useState(defaultInfo);
   const [copied, setCopied] = useState(false);
 
@@ -105,7 +102,7 @@ export default function TechStack() {
                   onClick={handleCopy}
                   className="absolute top-3 right-3 text-xs px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors"
                 >
-                  {copied ? "Copied" : "Copy"}
+                  {copied ? t("copied") : t("copy")}
                 </button>
 
                 <code className="text-sm text-zinc-300 whitespace-pre-wrap pr-20 block">
