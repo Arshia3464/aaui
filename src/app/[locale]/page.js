@@ -31,7 +31,7 @@ export default function Home() {
           transition={{ delay: 0.4 }}
           className="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur border border-white/10"
         >
-          <a href="/components">مشاهده کامپوننت‌ها</a>
+          <a href="/components">{t("button")}</a>
         </motion.button>
       </section>
       <TechStack />

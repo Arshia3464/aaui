@@ -74,7 +74,7 @@ export default function TechStack() {
 
   return (
     <section className="relative z-10 mt-40">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto sm:px-6 p-1">
         {/* info panel */}
         <div className="mb-10 min-h-65 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
           <AnimatePresence mode="wait">
@@ -90,17 +90,17 @@ export default function TechStack() {
                   <active.icon className="text-4xl text-white shrink-0" />
                 )}
 
-                <h3 className="text-3xl font-bold">{active.name}</h3>
+                <h3 className="sm:text-3xl text-lg font-bold">{active.name}</h3>
               </div>
 
-              <p className="text-zinc-400 text-start  mb-6">
+              <p className="text-zinc-400 text-start sm:text-md mb-6">
                 {active.description}
               </p>
 
-              <div className="relative rounded-xl bg-black/40 border border-white/10 p-4 overflow-x-auto">
+              <div className="relative sm:block hidden rounded-xl bg-black/40 border border-white/10 p-4 overflow-x-auto">
                 <button
                   onClick={handleCopy}
-                  className="absolute top-3 right-3 text-xs px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors"
+                  className="absolute top-3 right-3 text-xs px-3 py-1 rounded-lg  bg-white/10 hover:bg-white/20 border border-white/10 transition-colors"
                 >
                   {copied ? t("copied") : t("copy")}
                 </button>
