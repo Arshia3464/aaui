@@ -1,7 +1,7 @@
 {
   "home-page": {
-    "title": "english",
-    "description": "english"
+    "title": "Build Modern Interfaces Faster",
+    "description": "A collection of reusable components, blocks and layouts crafted for building modern user interfaces with Next.js, Tailwind CSS and Framer Motion."
   },
   "features": {
     "title": "Designed For Modern Development",
@@ -74,5 +74,28 @@
     "blocks": "blocks",
     "layouts": "layouts",
     "docs": "docs"
+  },
+  "components-page": {
+    "title": "Components",
+    "description": "A collection of reusable UI components built for modern interfaces using Next.js and Tailwind CSS. Each component includes a live preview, copyable code and usage examples.",
+    "previewText": "View the component in",
+    "codeText": "View and copy the code inside the",
+    "themeText": "Theme settings and customization options are displayed above the preview section.",
+    "resetText": "Use the"
+  },
+  "footer": {
+    "title": "Your Library",
+
+    "description": "Modern reusable UI components and boilerplates built for fast development workflows.",
+
+    "links": {
+      "components": "Components",
+      "docs": "Docs",
+      "showcase": "Showcase"
+    },
+
+    "copyright": "© 2026 Your Library. All rights reserved.",
+
+    "builtWith": "Built with Next.js, Tailwind CSS and Framer Motion."
   }
 }

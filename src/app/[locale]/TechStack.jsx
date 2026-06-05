@@ -76,7 +76,7 @@ export default function TechStack() {
     <section className="relative z-10 mt-40">
       <div className="max-w-6xl mx-auto px-6">
         {/* info panel */}
-        <div className="mb-10 min-h-[260px] rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
+        <div className="mb-10 min-h-65 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={active.name}
@@ -93,7 +93,7 @@ export default function TechStack() {
                 <h3 className="text-3xl font-bold">{active.name}</h3>
               </div>
 
-              <p className="text-zinc-400 leading-7 mb-6 max-w-3xl">
+              <p className="text-zinc-400 text-start  mb-6">
                 {active.description}
               </p>
 

@@ -19,7 +19,7 @@ const items = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 border-l border-white/10 p-6 hidden lg:block">
+    <aside className="w-64 border-e border-white/10 p-6 hidden lg:block">
       {items.map((section) => (
         <div key={section.title} className="mb-6">
           <h3 className="text-xs uppercase text-zinc-500 mb-3">

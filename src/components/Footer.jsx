@@ -1,24 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="relative z-10 mt-40 border-t border-white/10">
       {/* subtle glow */}
       <div className="absolute inset-0 bg-linear-to-t from-white/2 to-transparent pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 py-10">
+      <div className="max-w-6xl text-start mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* left */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-2">Your Library</h3>
+          <div className="text-start md:text-left">
+            <h3 className="text-xl text-start font-semibold mb-2">
+              {t("title")}
+            </h3>
 
-            <p className="text-sm text-zinc-500 max-w-sm leading-6">
-              Modern reusable UI components and boilerplates built for fast
-              development workflows.
+            <p className="text-sm text-zinc-500 text-start max-w-sm leading-6">
+              {t("description")}
             </p>
           </div>
 
@@ -28,18 +32,18 @@ export default function Footer() {
               href="/components"
               className="hover:text-white transition-colors"
             >
-              Components
+              {t("links.components")}
             </Link>
 
             <Link href="/docs" className="hover:text-white transition-colors">
-              Docs
+              {t("links.docs")}
             </Link>
 
             <Link
               href="/showcase"
               className="hover:text-white transition-colors"
             >
-              Showcase
+              {t("links.showcase")}
             </Link>
           </div>
 
@@ -65,9 +69,9 @@ export default function Footer() {
 
         {/* bottom */}
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
-          <p>© 2026 Your Library. All rights reserved.</p>
+          <p>{t("copyright")}</p>
 
-          <p>Built with Next.js, Tailwind CSS and Framer Motion.</p>
+          <p>{t("builtWith")}</p>
         </div>
       </div>
     </footer>

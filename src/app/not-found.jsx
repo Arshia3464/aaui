@@ -8,9 +8,9 @@ export default function GlobalNotFound() {
     <html lang="en">
       <body className="relative min-h-screen overflow-hidden bg-zinc-950 text-white">
         {/* background glow */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-500/20 blur-3xl rounded-full" />
+        <div className="absolute top-0 left-0 w-125 h-125 bg-purple-500/20 blur-3xl rounded-full" />
 
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full" />
+        <div className="absolute bottom-0 right-0 w-125 h-125 bg-cyan-500/10 blur-3xl rounded-full" />
 
         {/* subtle grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
