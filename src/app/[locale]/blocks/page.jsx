@@ -31,9 +31,9 @@ export default function Page() {
         className="
           relative overflow-hidden
           rounded-3xl border border-pink-500/20
-          bg-gradient-to-b
+          bg-linear-to-b
           from-pink-500/10
-          via-pink-500/[0.03]
+          via-pink-500/3
           to-transparent
           p-6
           backdrop-blur-xl
@@ -88,9 +88,9 @@ export default function Page() {
         className="
           relative overflow-hidden
           rounded-3xl border border-cyan-500/20
-          bg-gradient-to-b
+          bg-linear-to-b
           from-cyan-500/10
-          via-cyan-500/[0.03]
+          via-cyan-500/3
           to-transparent
           p-6
           backdrop-blur-xl
@@ -202,8 +202,8 @@ export default function Page() {
       <div
         className="
           rounded-3xl border border-white/10
-          bg-gradient-to-b
-          from-white/[0.03]
+          bg-linear-to-b
+          from-white/3
           to-transparent
           p-8
         "
