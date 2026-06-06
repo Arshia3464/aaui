@@ -14,7 +14,7 @@ const items = [
   {
     title: "General",
     links: [
-      { name: "Button", href: "/components/button" },
+      { name: "Forms", href: "/components/button" },
       { name: "Card", href: "/components/card" },
       { name: "Input", href: "/components/input" },
     ],
@@ -29,7 +29,7 @@ const items = [
   },
 ];
 
-export default function Sidebar() {
+export default function BlocksSidebar() {
   const [open, setOpen] = useState(false);
 
   const locale = useLocale();

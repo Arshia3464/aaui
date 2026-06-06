@@ -9,7 +9,7 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative z-10 mt-40 border-t border-white/10">
+    <footer className="relative z-10 mt-10 border-t border-white/10">
       {/* subtle glow */}
       <div className="absolute inset-0 bg-linear-to-t from-white/2 to-transparent pointer-events-none" />
 

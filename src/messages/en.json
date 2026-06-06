@@ -6,22 +6,17 @@
   },
   "features": {
     "title": "Designed For Modern Development",
-
     "description": "Everything is built to help you create beautiful interfaces faster without sacrificing flexibility or quality.",
-
     "feature": "Feature",
-
     "items": {
       "0": {
         "title": "Browse Ready Components",
         "description": "Explore a growing collection of reusable UI components and modern interface patterns built for real-world applications."
       },
-
       "1": {
         "title": "Customize Everything",
         "description": "Easily modify layouts, animations, spacing and themes to perfectly match your project and design system."
       },
-
       "2": {
         "title": "Built For Production",
         "description": "Responsive, scalable and optimized components designed with clean architecture and modern frontend practices."
@@ -31,13 +26,11 @@
   "tech-stack": {
     "copy": "Copy",
     "copied": "Copied",
-
     "default": {
       "name": "Modern Frontend Stack",
       "description": "Built using a carefully selected modern frontend stack focused on performance, scalability, animations and developer experience. Hover over each technology to explore its role in the project.",
       "code": "Reusable components • Smooth animations • Modern tooling"
     },
-
     "items": {
       "javascript": {
         "name": "JavaScript",
@@ -86,17 +79,29 @@
   },
   "footer": {
     "title": "Your Library",
-
     "description": "Modern reusable UI components and boilerplates built for fast development workflows.",
-
     "links": {
       "components": "Components",
       "docs": "Docs",
       "showcase": "Showcase"
     },
-
     "copyright": "© 2026 Your Library. All rights reserved.",
-
     "builtWith": "Built with Next.js, Tailwind CSS and Framer Motion."
+  },
+  "button-page": {
+    "title": "Buttons",
+    "description": "A collection of modern button components built with React, Tailwind CSS and smooth interactive effects.",
+    "GlassButton": {
+      "title": "Glass Button",
+      "description": "A clean glassmorphism button with a soft translucent appearance."
+    },
+    "LayerButton": {
+      "title": "Layer Button",
+      "description": "A layered button design that creates visual depth and interaction."
+    },
+    "GlowButton": {
+      "title": "Glow Button",
+      "description": "A glowing button with a subtle ambient lighting effect that attracts attention."
+    }
   }
 }
