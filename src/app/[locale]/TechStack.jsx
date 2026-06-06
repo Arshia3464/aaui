@@ -141,7 +141,7 @@ export default function TechStack() {
                   e.currentTarget.style.setProperty("--x", `${x}px`);
                   e.currentTarget.style.setProperty("--y", `${y}px`);
                 }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 h-[170px] transition-colors"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 h-42.5 transition-colors"
               >
                 {/* cursor glow */}
                 <div

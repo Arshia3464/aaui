@@ -14,7 +14,7 @@ const items = [
   {
     title: "General",
     links: [
-      { name: "Forms", href: "/components/button" },
+      { name: "Forms", href: "/blocks/forms" },
       { name: "Card", href: "/components/card" },
       { name: "Input", href: "/components/input" },
     ],

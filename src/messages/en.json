@@ -103,5 +103,21 @@
       "title": "Glow Button",
       "description": "A glowing button with a subtle ambient lighting effect that attracts attention."
     }
+  },
+  "input-page": {
+    "title": "Inputs",
+    "description": "A collection of modern input components designed for forms, authentication and interactive user experiences.",
+    "IranPhoneInput": {
+      "title": "Iran Phone Input",
+      "description": "An input field for Iranian phone numbers with built-in validation."
+    },
+    "EmailInput": {
+      "title": "Email Input",
+      "description": "An email input field with validation for correct formatting."
+    },
+    "FloatingLabelInput": {
+      "title": "Floating Label Input",
+      "description": "A modern input component with an animated floating label that smoothly moves inside the border when focused or filled."
+    }
   }
 }
