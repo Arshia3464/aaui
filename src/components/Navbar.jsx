@@ -36,7 +36,7 @@ export default function Navbar() {
             {t("blocks")}
           </Link>
 
-          <Link href="/layouts" className="hover:text-white transition-colors">
+          <Link href="/showcase" className="hover:text-white transition-colors">
             {t("layouts")}
           </Link>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import { useTranslations } from "next-intl";
 
 import { FaGithub, FaTwitter } from "react-icons/fa";
@@ -11,17 +12,15 @@ export default function Footer() {
   return (
     <footer className="relative z-10 mt-10 border-t border-white/10">
       {/* subtle glow */}
-      <div className="absolute inset-0 bg-linear-to-t from-white/2 to-transparent pointer-events-none" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-white/2 to-transparent" />
 
-      <div className="max-w-6xl text-start mx-auto px-6 py-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* left */}
           <div className="text-start md:text-left">
-            <h3 className="text-xl text-start font-semibold mb-2">
-              {t("title")}
-            </h3>
+            <h3 className="mb-2 text-xl font-semibold">{t("title")}</h3>
 
-            <p className="text-sm text-zinc-500 text-start max-w-sm leading-6">
+            <p className="max-w-sm text-sm leading-6 text-zinc-500">
               {t("description")}
             </p>
           </div>
@@ -30,18 +29,18 @@ export default function Footer() {
           <div className="flex items-center gap-6 text-sm text-zinc-400">
             <Link
               href="/components"
-              className="hover:text-white transition-colors"
+              className="transition-colors hover:text-white"
             >
               {t("links.components")}
             </Link>
 
-            <Link href="/docs" className="hover:text-white transition-colors">
+            <Link href="/docs" className="transition-colors hover:text-white">
               {t("links.docs")}
             </Link>
 
             <Link
               href="/showcase"
-              className="hover:text-white transition-colors"
+              className="transition-colors hover:text-white"
             >
               {t("links.showcase")}
             </Link>
@@ -52,7 +51,14 @@ export default function Footer() {
             <a
               href="https://github.com"
               target="_blank"
-              className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all"
+              rel="noopener noreferrer"
+              className="
+                flex h-10 w-10 items-center justify-center
+                rounded-xl border border-white/10
+                bg-white/5 text-zinc-400
+                backdrop-blur-md transition-all
+                hover:bg-white/10 hover:text-white
+              "
             >
               <FaGithub size={18} />
             </a>
@@ -60,7 +66,14 @@ export default function Footer() {
             <a
               href="https://twitter.com"
               target="_blank"
-              className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all"
+              rel="noopener noreferrer"
+              className="
+                flex h-10 w-10 items-center justify-center
+                rounded-xl border border-white/10
+                bg-white/5 text-zinc-400
+                backdrop-blur-md transition-all
+                hover:bg-white/10 hover:text-white
+              "
             >
               <FaTwitter size={18} />
             </a>
@@ -68,10 +81,30 @@ export default function Footer() {
         </div>
 
         {/* bottom */}
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
-          <p>{t("copyright")}</p>
+        <div
+          className="
+            mt-10 flex flex-col items-center justify-between
+            gap-5 border-t border-white/5
+            pt-6 text-sm
+            md:flex-row
+          "
+        >
+          <p className="text-zinc-600">{t("copyright")}</p>
 
-          <p>{t("builtWith")}</p>
+          <p className="flex items-center gap-2 text-zinc-400">
+            ساخته شده با
+            <span className="text-red-400">♡</span>
+            توسط
+            <span
+              className="
+                bg-linear-to-r from-white to-zinc-400
+                bg-clip-text font-semibold
+                text-transparent
+              "
+            >
+              Arshia
+            </span>
+          </p>
         </div>
       </div>
     </footer>
