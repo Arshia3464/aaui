@@ -48,6 +48,7 @@ export default function ComponentPreview({
       transition={{
         duration: 0.35,
         ease: "easeOut",
+        delay: 0.5,
       }}
       className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40 backdrop-blur-xl transition-colors hover:border-white/15"
     >

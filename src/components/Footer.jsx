@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { useTranslations } from "next-intl";
 
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaTelegramPlane } from "react-icons/fa";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -49,7 +49,7 @@ export default function Footer() {
           {/* socials */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Arshia3464/aaui"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -64,7 +64,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://twitter.com"
+              href="https://t.me/arshiabds"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -75,7 +75,7 @@ export default function Footer() {
                 hover:bg-white/10 hover:text-white
               "
             >
-              <FaTwitter size={18} />
+              <FaTelegramPlane size={18} />
             </a>
           </div>
         </div>
