@@ -46,8 +46,6 @@ export default async function LocaleLayout({ children, params }) {
   // Direction setting
   const dir = locale === "fa" ? "rtl" : "ltr";
 
-  console.log(locale);
-
   return (
     <html lang={locale} dir={dir} className="h-full antialiased">
       <body

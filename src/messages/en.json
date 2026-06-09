@@ -1,8 +1,9 @@
 {
   "home-page": {
-    "title": "Build Modern Interfaces Faster",
-    "description": "A collection of reusable components, blocks and layouts crafted for building modern user interfaces with Next.js, Tailwind CSS and Framer Motion.",
-    "button": "Explore components!"
+    "title": "Components that",
+    "title-accent": "actually slap.",
+    "description": "A handcrafted collection of animated, accessible UI components. Drop them in, ship faster.",
+    "button": "Browse components"
   },
   "features": {
     "title": "Designed For Modern Development",

@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-900/60 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/20 bg-zinc-900/20 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* logo */}
         <div className="text-2xl font-extrabold">
