@@ -117,7 +117,7 @@ export default function Home() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
             <span className="font-mono text-xs text-violet-400">
-              v2.0 — now with dark mode
+              v0.1.0-beta · Work in progress
             </span>
           </motion.div>
 
