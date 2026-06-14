@@ -9,16 +9,16 @@ export default function FlipCard({
   return (
     <div
       className="
-        group h-[420px] w-[320px]
-        [perspective:1200px]
+        group h-105 w-[320px]
+        perspective-distant
       "
     >
       <div
         className="
           relative h-full w-full
           transition-transform duration-700
-          [transform-style:preserve-3d]
-          group-hover:[transform:rotateY(180deg)]
+          transform-3d
+          group-hover:transform-[rotateY(180deg)]
         "
       >
         {/* front */}
@@ -27,7 +27,7 @@ export default function FlipCard({
             absolute inset-0 overflow-hidden
             rounded-3xl border border-white/10
             bg-zinc-900
-            [backface-visibility:hidden]
+            backface-hidden
             [-webkit-backface-visibility:hidden]
           "
         >
@@ -66,8 +66,8 @@ export default function FlipCard({
             absolute inset-0 overflow-hidden
             rounded-3xl border border-white/10
             bg-zinc-900
-            [transform:rotateY(180deg)]
-            [backface-visibility:hidden]
+            transform-[rotateY(180deg)]
+            backface-hidden
             [-webkit-backface-visibility:hidden]
           "
         >
@@ -113,7 +113,7 @@ export default function FlipCard({
                 className="
                   mb-5 inline-flex items-center gap-2
                   rounded-full border border-white/10
-                  bg-white/[0.04]
+                  bg-white/4
                   px-3 py-1 text-xs text-zinc-300
                   backdrop-blur-md
                 "
@@ -132,11 +132,11 @@ export default function FlipCard({
             <button
               className="
                 rounded-2xl border border-white/10
-                bg-white/[0.08]
+                bg-white/8
                 px-5 py-3
                 text-white backdrop-blur-md
                 transition-colors
-                hover:bg-white/[0.12]
+                hover:bg-white/12
               "
             >
               مشاهده پروفایل

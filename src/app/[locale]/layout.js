@@ -12,11 +12,50 @@ const vazirmatn = localFont({
   display: "swap",
 });
 
-export const metadata = {
-  title: "AAUI | کتابخانه کامپوننت‌های مدرن",
-  description:
-    "مجموعه‌ای از کامپوننت‌ها، بلاک‌ها و لایه‌بندی‌های مدرن برای ساخت سریع رابط‌های کاربری حرفه‌ای با Next.js و Tailwind CSS.",
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  const metadata =
+    locale === "fa"
+      ? {
+          title: "AAUI | کامپوننت‌های React و Next.js با Tailwind CSS",
+          description:
+            "مجموعه‌ای از کامپوننت‌ها، بلاک‌ها و لایه‌بندی‌های مدرن برای ساخت رابط‌های کاربری حرفه‌ای با React، Next.js و Tailwind CSS.",
+        }
+      : {
+          title:
+            "AAUI | Modern React & Next.js UI Components Built with Tailwind CSS",
+          description:
+            "A collection of modern UI components, blocks, and layouts for building professional interfaces with React, Next.js, and Tailwind CSS.",
+        };
+
+  return {
+    ...metadata,
+
+    alternates: {
+      canonical: `https://aaui.dev/${locale}`,
+      languages: {
+        en: "https://aaui.dev/en",
+        fa: "https://aaui.dev/fa",
+      },
+    },
+
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      url: `https://aaui.dev/${locale}`,
+      siteName: "AAUI",
+      locale: locale === "fa" ? "fa_IR" : "en_US",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: metadata.title,
+      description: metadata.description,
+    },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fa" }];
@@ -53,7 +92,7 @@ export default async function LocaleLayout({ children, params }) {
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
-          <main className="flex-1 ">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
 
