@@ -33,17 +33,17 @@ export async function generateMetadata({ params }) {
     ...metadata,
 
     alternates: {
-      canonical: `https://aaui.dev/${locale}`,
+      canonical: `https://aaui.ir/${locale}`,
       languages: {
-        en: "https://aaui.dev/en",
-        fa: "https://aaui.dev/fa",
+        en: "https://aaui.ir/en",
+        fa: "https://aaui.ir/fa",
       },
     },
 
     openGraph: {
       title: metadata.title,
       description: metadata.description,
-      url: `https://aaui.dev/${locale}`,
+      url: `https://aaui.ir/${locale}`,
       siteName: "AAUI",
       locale: locale === "fa" ? "fa_IR" : "en_US",
       type: "website",

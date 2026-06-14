@@ -10,6 +10,7 @@ import FigmaButton from "@/components/buttons/FigmaButton";
 import fs from "fs";
 import path from "path";
 import FadeUp from "@/components/FadeUp";
+import DownloadButton from "@/components/buttons/DownloadButton";
 
 const buttonsDir = path.join(process.cwd(), "src/components/buttons");
 
@@ -125,13 +126,13 @@ export default function Page() {
       </ComponentPreview>
 
       {/* glow button */}
-      <ComponentPreview
+      {/* <ComponentPreview
         title={t("GlowButton.title")}
         description={t("GlowButton.description")}
         code={glowButtonCode}
       >
         <GlowButton>Button</GlowButton>
-      </ComponentPreview>
+      </ComponentPreview> */}
 
       {/* figma button */}
       <ComponentPreview
@@ -143,6 +144,16 @@ export default function Page() {
         code={figmaButtonCode}
       >
         <FigmaButton />
+      </ComponentPreview>
+
+      <ComponentPreview
+        title="دکمه دانلود با پیشرفت انیمیشن"
+        description="
+        دکمه‌ای با انیمیشن پیشرفت که هنگام کلیک، یک نوار پیشرفت دور دکمه را پر می‌کند.
+      "
+        code={getCode("DownloadButton")}
+      >
+        <DownloadButton>دانلود</DownloadButton>
       </ComponentPreview>
     </div>
   );
