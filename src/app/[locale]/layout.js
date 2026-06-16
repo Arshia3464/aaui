@@ -88,7 +88,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} dir={dir} className="h-full antialiased">
       <body
-        className={`min-h-full flex flex-col bg-zinc-950 text-zinc-200 ${vazirmatn.className}`}
+        className={`min-h-full flex flex-col bg-background text-foreground ${vazirmatn.className}`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
@@ -102,7 +102,7 @@ export default async function LocaleLayout({ children, params }) {
           richColors
           toastOptions={{
             className:
-              "!bg-zinc-900/80 !border !border-white/10 !text-white !backdrop-blur-xl",
+              "!bg-secondary/80 !border !border-foreground/10 !text-foreground !backdrop-blur-xl",
           }}
         />
       </body>

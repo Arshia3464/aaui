@@ -30,13 +30,13 @@ export default function Page() {
           <div
             className="
               mb-5 inline-flex items-center gap-2
-              rounded-full border border-white/10
-              bg-white/[0.03]
-              px-4 py-2 text-sm text-zinc-300
+              rounded-full border border-foreground/10
+              bg-foreground/5
+              px-4 py-2 text-sm text-foreground/80
               backdrop-blur-xl
             "
           >
-            <div className="h-2 w-2 rounded-full bg-purple-400" />
+            <div className="h-2 w-2 rounded-full bg-accent" />
             Cards Collection
           </div>
 
@@ -44,7 +44,7 @@ export default function Page() {
             کارت‌های مدرن و قابل استفاده مجدد
           </h1>
 
-          <p className="max-w-3xl text-lg leading-8 text-zinc-400">
+          <p className="max-w-3xl text-lg leading-8 text-foreground/60">
             مجموعه‌ای از کارت‌های مدرن ساخته شده با React و Tailwind CSS که
             می‌توانید آن‌ها را مستقیماً داخل پروژه‌های خود استفاده و شخصی‌سازی
             کنید.
@@ -57,18 +57,18 @@ export default function Page() {
         <div
           className="
             overflow-hidden rounded-[32px]
-            border border-white/10
-            bg-zinc-900/30
+            border border-foreground/10
+            bg-secondary/30
             backdrop-blur-2xl
           "
         >
           {/* top glow */}
-          <div className="h-1 w-full bg-linear-to-r from-purple-500/50 via-cyan-500/50 to-transparent" />
+          <div className="h-1 w-full bg-linear-to-r from-accent/50 via-primary/50 to-transparent" />
 
           <div className="p-6 md:p-8">
             <h2 className="mb-6 text-2xl font-bold">نحوه استفاده</h2>
 
-            <div className="space-y-5 leading-8 text-zinc-400">
+            <div className="space-y-5 leading-8 text-foreground/60">
               <p>
                 • تمامی کارت‌ها به‌صورت کامپوننت React ساخته شده‌اند و می‌توانید
                 آن‌ها را داخل صفحات، داشبوردها، لندینگ پیج‌ها و پروژه‌های شخصی
@@ -83,7 +83,7 @@ export default function Page() {
 
               <p>
                 • برای اضافه کردن عملکرد دلخواه می‌توانید پراپ‌های مختلف مانند{" "}
-                <code className="rounded-lg bg-white/5 px-2 py-1 text-zinc-300">
+                <code className="rounded-lg bg-foreground/5 px-2 py-1 text-foreground/80">
                   onClick
                 </code>{" "}
                 یا لینک‌های اختصاصی خود را استفاده کنید.
@@ -91,17 +91,17 @@ export default function Page() {
 
               <p>
                 • بعضی از کارت‌ها ممکن است از{" "}
-                <span className="text-white">Framer Motion</span> برای انیمیشن
-                استفاده کنند.
+                <span className="text-foreground">Framer Motion</span> برای
+                انیمیشن استفاده کنند.
               </p>
 
               <div
                 className="
                   overflow-x-auto rounded-2xl
-                  border border-white/10
-                  bg-black/30
+                  border border-foreground/10
+                  bg-background/30
                   px-5 py-4
-                  text-sm text-zinc-300
+                  text-sm text-foreground/80
                 "
               >
                 npm install framer-motion

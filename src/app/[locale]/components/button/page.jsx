@@ -4,7 +4,6 @@ import ComponentPreview from "@/components/Preview";
 
 import GlassButton from "@/components/buttons/GlassButton";
 import LayerButton from "@/components/buttons/LayerButton";
-import GlowButton from "@/components/buttons/GlowButton";
 import FigmaButton from "@/components/buttons/FigmaButton";
 
 import fs from "fs";
@@ -23,82 +22,56 @@ function getCode(name) {
 }
 
 const glassButtonCode = getCode("GlassButton");
-
 const layerButtonCode = getCode("LayerButton");
-
-const glowButtonCode = getCode("GlowButton");
-
 const figmaButtonCode = getCode("FigmaButton");
 
 export default function Page() {
   const t = useTranslations("button-page");
 
   return (
-    <div className="space-y-14">
+    <div className="space-y-8">
       {/* header */}
       <FadeUp delay={0}>
-        <div className="">
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl">{t("title")}</h1>
-
-          <p className="leading-7 text-zinc-400 md:text-lg">
+        <div>
+          <h1 className="mb-4 text-xl font-bold md:text-3xl">{t("title")}</h1>
+          <p className="leading-7 text-sm text-foreground/60 md:text-lg">
             {t("description")}
           </p>
         </div>
       </FadeUp>
+
       {/* usage */}
       <FadeUp delay={0.2}>
-        <div
-          className="
-          rounded-3xl border border-white/10
-          bg-zinc-900/30
-          p-6 md:p-8
-          backdrop-blur-xl
-        "
-        >
-          <h2 className="mb-4 text-2xl font-semibold">نحوه استفاده</h2>
-
-          <div className="space-y-4 leading-7 text-zinc-400">
+        <div className="rounded-xl border border-foreground/20 bg-secondary/20 p-3 md:p-4 backdrop-blur-xl">
+          <h2 className="mb-2 text-xl font-semibold">نحوه استفاده</h2>
+          <div className="space-y-1 leading-7 text-sm text-foreground/80">
             <p>
               • هر دکمه را می‌توانید مانند یک کامپوننت عادی React داخل پروژه خود
               استفاده کنید.
             </p>
-
             <p>
               • متن داخل دکمه‌ها کاملاً قابل تغییر است و می‌توانید عباراتی مثل
               «شروع کنید»، «ثبت نام» یا «مشاهده بیشتر» قرار دهید.
             </p>
-
             <p>
-              • برای اجرای عملکرد دلخواه کافی است پراپ{" "}
-              <code className="rounded bg-white/5 px-2 py-1 text-zinc-300">
+              • برای اجرای عملکرد دلخواه کافی است پراپ
+              <code className="rounded text-sm bg-foreground/5 px-2 py-1 text-foreground/80">
                 onClick
-              </code>{" "}
+              </code>
               را به دکمه اضافه کنید.
             </p>
-
             <p>
-              • برخی از کامپوننت‌ها ممکن است از{" "}
-              <span className="text-white">Framer Motion</span> استفاده کنند. در
-              این صورت می‌توانید آن را با دستور زیر نصب کنید:
+              • برخی از کامپوننت‌ها ممکن است از
+              <span className="text-foreground">Framer Motion</span> استفاده
+              کنند. در این صورت می‌توانید آن را با دستور زیر نصب کنید:
             </p>
-
-            <div
-              className="
-              overflow-x-auto rounded-2xl
-              border border-white/10
-              bg-black/30
-              px-4 py-3
-              text-sm text-zinc-300 text-left
-            "
-            >
+            <div className="overflow-x-auto rounded-2xl border border-foreground/10 bg-background/30 px-4 py-3 text-sm text-foreground/80 text-left">
               npm install framer-motion
             </div>
-
             <p>
               • تمامی دکمه‌ها با Tailwind CSS ساخته شده‌اند و به‌راحتی می‌توانید
               رنگ، فاصله‌ها، انیمیشن‌ها و ظاهر آن‌ها را شخصی‌سازی کنید.
             </p>
-
             <p>
               • این کامپوننت‌ها برای صفحات فرود، داشبوردها و رابط‌های مدرن طراحی
               شده‌اند و روی موبایل نیز کاملاً ریسپانسیو هستند.
@@ -107,54 +80,44 @@ export default function Page() {
         </div>
       </FadeUp>
 
-      {/* glass button */}
-      <ComponentPreview
-        title={t("GlassButton.title")}
-        description={t("GlassButton.description")}
-        code={glassButtonCode}
-      >
-        <GlassButton>Button</GlassButton>
-      </ComponentPreview>
+      {/* grid of button previews */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2">
+        <ComponentPreview
+          size="small"
+          title={t("GlassButton.title")}
+          description={t("GlassButton.description")}
+          code={glassButtonCode}
+        >
+          <GlassButton>Button</GlassButton>
+        </ComponentPreview>
 
-      {/* layer button */}
-      <ComponentPreview
-        title={t("LayerButton.title")}
-        description={t("LayerButton.description")}
-        code={layerButtonCode}
-      >
-        <LayerButton>Button</LayerButton>
-      </ComponentPreview>
+        <ComponentPreview
+          size="small"
+          title={t("LayerButton.title")}
+          description={t("LayerButton.description")}
+          code={layerButtonCode}
+        >
+          <LayerButton>Button</LayerButton>
+        </ComponentPreview>
 
-      {/* glow button */}
-      {/* <ComponentPreview
-        title={t("GlowButton.title")}
-        description={t("GlowButton.description")}
-        code={glowButtonCode}
-      >
-        <GlowButton>Button</GlowButton>
-      </ComponentPreview> */}
+        <ComponentPreview
+          size="small"
+          title="دکمه الهام گرفته از Figma"
+          description="دکمه‌ای مدرن با انیمیشن‌های نرم و مینیمال که از سبک تعامل وبسایت Figma الهام گرفته شده."
+          code={figmaButtonCode}
+        >
+          <FigmaButton />
+        </ComponentPreview>
 
-      {/* figma button */}
-      <ComponentPreview
-        title="دکمه الهام گرفته از Figma"
-        description="
-          دکمه‌ای مدرن با انیمیشن‌های نرم و مینیمال که از سبک تعامل وبسایت
-          Figma الهام گرفته شده و برای صفحات فرود و رابط‌های مدرن مناسب است.
-        "
-        code={figmaButtonCode}
-      >
-        <FigmaButton />
-      </ComponentPreview>
-
-      <ComponentPreview
-        title="دکمه دانلود با پیشرفت انیمیشن"
-        description="
-        دکمه‌ای با انیمیشن پیشرفت که هنگام کلیک، یک نوار پیشرفت دور دکمه را پر می‌کند.
-      "
-        code={getCode("DownloadButton")}
-      >
-        <DownloadButton>دانلود</DownloadButton>
-      </ComponentPreview>
+        <ComponentPreview
+          size="small"
+          title="دکمه دانلود با پیشرفت انیمیشن"
+          description="دکمه‌ای با انیمیشن پیشرفت که هنگام کلیک، یک نوار پیشرفت دور دکمه را پر می‌کند."
+          code={getCode("DownloadButton")}
+        >
+          <DownloadButton>دانلود</DownloadButton>
+        </ComponentPreview>
+      </div>
     </div>
   );
 }

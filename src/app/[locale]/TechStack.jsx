@@ -76,7 +76,7 @@ export default function TechStack() {
     <section className="relative z-10 mt-40">
       <div className="max-w-6xl mx-auto sm:px-6 p-1">
         {/* info panel */}
-        <div className="mb-10 min-h-65 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
+        <div className="mb-10 min-h-65 rounded-3xl border border-[color:var(--foreground)]/10 bg-[color:var(--background)]/5 backdrop-blur-xl p-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={active.name}
@@ -87,25 +87,27 @@ export default function TechStack() {
             >
               <div className="flex items-center gap-4 mb-5">
                 {active.icon && (
-                  <active.icon className="text-4xl text-white shrink-0" />
+                  <active.icon className="text-4xl text-[var(--foreground)] shrink-0" />
                 )}
 
-                <h3 className="sm:text-3xl text-lg font-bold">{active.name}</h3>
+                <h3 className="sm:text-3xl text-lg font-bold text-[var(--foreground)]">
+                  {active.name}
+                </h3>
               </div>
 
-              <p className="text-zinc-400 text-start sm:text-md mb-6">
+              <p className="text-[color:var(--foreground)]/70 text-start sm:text-md mb-6">
                 {active.description}
               </p>
 
-              <div className="relative sm:block hidden rounded-xl bg-black/40 border border-white/10 p-4 overflow-x-auto">
+              <div className="relative sm:block hidden rounded-xl bg-[color:var(--background)]/40 border border-[color:var(--foreground)]/10 p-4 overflow-x-auto">
                 <button
                   onClick={handleCopy}
-                  className="absolute top-3 right-3 text-xs px-3 py-1 rounded-lg  bg-white/10 hover:bg-white/20 border border-white/10 transition-colors"
+                  className="absolute top-3 right-3 text-xs px-3 py-1 rounded-lg bg-[color:var(--background)]/10 hover:bg-[color:var(--background)]/20 border border-[color:var(--foreground)]/10 transition-colors"
                 >
                   {copied ? t("copied") : t("copy")}
                 </button>
 
-                <code className="text-sm text-zinc-300 whitespace-pre-wrap pr-20 block">
+                <code className="text-sm text-[color:var(--foreground)]/70 whitespace-pre-wrap pr-20 block">
                   {active.code}
                 </code>
               </div>
@@ -141,7 +143,7 @@ export default function TechStack() {
                   e.currentTarget.style.setProperty("--x", `${x}px`);
                   e.currentTarget.style.setProperty("--y", `${y}px`);
                 }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 h-42.5 transition-colors"
+                className="group relative overflow-hidden rounded-2xl border border-[color:var(--foreground)]/10 bg-[color:var(--background)]/5 backdrop-blur-xl p-6 h-42.5 transition-colors"
               >
                 {/* cursor glow */}
                 <div
@@ -158,13 +160,15 @@ export default function TechStack() {
                 />
 
                 {/* border glow */}
-                <div className="absolute inset-0 rounded-2xl border border-white/5 group-hover:border-white/15 transition-colors" />
+                <div className="absolute inset-0 rounded-2xl border border-[color:var(--foreground)]/5 group-hover:border-[color:var(--foreground)]/15 transition-colors" />
 
                 {/* content */}
                 <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-                  <Icon className="text-5xl mb-4" />
+                  <Icon className="text-5xl mb-4 text-[var(--foreground)]" />
 
-                  <h3 className="font-medium text-lg">{item.name}</h3>
+                  <h3 className="font-medium text-lg text-[var(--foreground)]">
+                    {item.name}
+                  </h3>
                 </div>
               </motion.div>
             );

@@ -31,9 +31,11 @@ export default function FeaturesSection() {
       <div className="max-w-6xl mx-auto px-6">
         {/* section heading */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">{t("title")}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-5 text-[var(--foreground)]">
+            {t("title")}
+          </h2>
 
-          <p className="text-zinc-400 max-w-2xl mx-auto leading-8 text-lg">
+          <p className="text-[var(--foreground)] max-w-2xl mx-auto leading-8 text-lg">
             {t("description")}
           </p>
         </div>
@@ -57,15 +59,15 @@ export default function FeaturesSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="inline-flex mb-6 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-4 py-1.5 text-sm text-zinc-300">
+                  <div className="inline-flex mb-6 rounded-full border border-[color:var(--foreground)]/10 bg-[color:var(--background)]/5 backdrop-blur-md px-4 py-1.5 text-sm text-[var(--foreground)]">
                     {t("feature")} {index + 1}
                   </div>
 
-                  <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[var(--foreground)]">
                     {feature.title}
                   </h3>
 
-                  <p className="text-zinc-400 leading-8 text-lg max-w-xl">
+                  <p className="text-[var(--foreground)] leading-8 text-lg max-w-xl">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -82,13 +84,13 @@ export default function FeaturesSection() {
                   className="group relative"
                 >
                   {/* ambient glow */}
-                  <div className="absolute -inset-10 rounded-[40px] bg-linear-to-r from-purple-500/20 via-cyan-500/10 to-blue-500/20 blur-3xl opacity-70" />
+                  <div className="absolute -inset-10 rounded-[40px] bg-[color:var(--foreground)]/20 blur-3xl opacity-70" />
 
                   {/* secondary soft glow */}
-                  <div className="absolute inset-0 rounded-3xl bg-white/3" />
+                  <div className="absolute inset-0 rounded-3xl bg-[color:var(--background)]/3" />
 
                   {/* image container */}
-                  <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/60 backdrop-blur-xl shadow-2xl">
+                  <div className="relative overflow-hidden rounded-3xl border border-[color:var(--foreground)]/10 bg-[color:var(--background)]/60 backdrop-blur-xl shadow-2xl">
                     {/* image */}
                     <img
                       src={feature.image}
@@ -97,10 +99,10 @@ export default function FeaturesSection() {
                     />
 
                     {/* dark gradient overlay */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-[color:var(--background)]/50 via-[color:var(--background)]/10 to-transparent" />
 
                     {/* subtle top shine */}
-                    <div className="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-[color:var(--foreground)]/10 via-transparent to-transparent opacity-60" />
                   </div>
                 </motion.div>
               </div>

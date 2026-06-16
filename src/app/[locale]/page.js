@@ -10,42 +10,42 @@ import FeaturesSection from "./Features";
 const TOKENS = [
   {
     text: "import { Button }",
-    cls: "text-violet-400 border-violet-400/25 bg-violet-500/10",
+    cls: "text-[var(--foreground)] border-[color:var(--foreground)]/25 bg-[color:var(--background)]/10",
     pos: "top-[18%] left-[7%]",
     delay: 0.2,
     dur: 9,
   },
   {
     text: "export default",
-    cls: "text-white/35 border-white/10 bg-white/[0.04]",
+    cls: "text-[color:var(--foreground)]/35 border-[color:var(--foreground)]/10 bg-[color:var(--background)]/4",
     pos: "top-[32%] left-[3%]",
     delay: 0.5,
     dur: 7,
   },
   {
     text: "<Modal />",
-    cls: "text-fuchsia-300 border-fuchsia-300/20 bg-fuchsia-500/8",
+    cls: "text-[color:var(--foreground)]/30 border-[color:var(--foreground)]/20 bg-[color:var(--background)]/8",
     pos: "top-[55%] left-[6%]",
     delay: 0.8,
     dur: 11,
   },
   {
     text: "useAnimation()",
-    cls: "text-violet-400 border-violet-400/25 bg-violet-500/10",
+    cls: "text-[var(--foreground)] border-[color:var(--foreground)]/25 bg-[color:var(--background)]/10",
     pos: "top-[22%] right-[8%]",
     delay: 0.3,
     dur: 8,
   },
   {
     text: "const theme =",
-    cls: "text-white/35 border-white/10 bg-white/[0.04]",
+    cls: "text-[color:var(--foreground)]/35 border-[color:var(--foreground)]/10 bg-[color:var(--background)]/4",
     pos: "top-[42%] right-[4%]",
     delay: 0.6,
     dur: 10,
   },
   {
     text: "framer-motion",
-    cls: "text-fuchsia-300 border-fuchsia-300/20 bg-fuchsia-500/8",
+    cls: "text-[color:var(--foreground)]/30 border-[color:var(--foreground)]/20 bg-[color:var(--background)]/8",
     pos: "top-[65%] right-[7%]",
     delay: 1.0,
     dur: 7,
@@ -108,15 +108,15 @@ export default function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-500/15 px-4 py-1.5"
+            className="mb-8 flex items-center gap-2 rounded-full border border-[color:var(--foreground)]/30 bg-[color:var(--background)]/15 px-4 py-1.5"
           >
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-violet-400"
+              className="h-1.5 w-1.5 rounded-full bg-[var(--foreground)]"
               style={{ boxShadow: "0 0 8px 2px rgba(167,139,250,0.6)" }}
               animate={{ opacity: [1, 0.4, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
-            <span className="font-mono text-xs text-violet-400">
+            <span className="font-mono text-xs text-[var(--foreground)]">
               v0.1.0-beta · Work in progress
             </span>
           </motion.div>
@@ -128,7 +128,7 @@ export default function Home() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="mb-6 text-[clamp(40px,7vw,80px)] font-black leading-none tracking-[-0.04em]"
           >
-            <span className="text-white">{t("title")}&nbsp;</span>
+            <span className="text-[var(--foreground)]">{t("title")}&nbsp;</span>
             <span className="bg-gradient-to-br from-violet-400 via-fuchsia-400 to-orange-400 bg-clip-text text-transparent">
               {t("title-accent")}
             </span>
@@ -139,7 +139,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="mb-10 max-w-md text-lg leading-relaxed text-zinc-400"
+            className="mb-10 max-w-md text-lg leading-relaxed text-[color:var(--foreground)]/70"
           >
             {t("description")}
           </motion.p>
@@ -163,7 +163,7 @@ export default function Home() {
 
             <a
               href="https://github.com"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-transparent px-7 py-3.5 text-sm font-medium text-white/70 transition-all duration-150 hover:border-white/20 hover:bg-white/5 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-xl border border-[color:var(--foreground)]/10 bg-transparent px-7 py-3.5 text-sm font-medium text-[color:var(--foreground)]/70 transition-all duration-150 hover:border-[color:var(--foreground)]/20 hover:bg-[color:var(--background)]/5 hover:text-[var(--foreground)]"
             >
               View on GitHub
             </a>
@@ -195,16 +195,18 @@ export default function Home() {
             ].map(({ value, label, accent }) => (
               <div
                 key={label}
-                className="flex items-center gap-3 rounded-xl border border-white/[0.08] bg-white/[0.04] px-5 py-3"
+                className="flex items-center gap-3 rounded-xl border border-[color:var(--foreground)]/[0.08] bg-[color:var(--background)]/4 px-5 py-3"
               >
                 <div
                   className={`h-6 w-1 rounded-full bg-gradient-to-b ${accent}`}
                 />
                 <div>
-                  <p className="text-lg font-bold leading-none tracking-tight text-white">
+                  <p className="text-lg font-bold leading-none tracking-tight text-[var(--foreground)]">
                     {value}
                   </p>
-                  <p className="mt-0.5 text-xs text-zinc-500">{label}</p>
+                  <p className="mt-0.5 text-xs text-[color:var(--foreground)]/50">
+                    {label}
+                  </p>
                 </div>
               </div>
             ))}

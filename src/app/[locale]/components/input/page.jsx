@@ -34,21 +34,23 @@ export default function Page() {
       <div className="max-w-3xl">
         <h1 className="mb-4 text-3xl font-bold md:text-4xl">{t("title")}</h1>
 
-        <p className="leading-7 text-zinc-400 md:text-lg">{t("description")}</p>
+        <p className="leading-7 text-foreground/60 md:text-lg">
+          {t("description")}
+        </p>
       </div>
 
       {/* usage */}
       <div
         className="
-          rounded-3xl border border-white/10
-          bg-zinc-900/30
+          rounded-3xl border border-foreground/10
+          bg-secondary/30
           p-6 md:p-8
           backdrop-blur-xl
         "
       >
         <h2 className="mb-4 text-2xl font-semibold">نحوه استفاده</h2>
 
-        <div className="space-y-4 leading-7 text-zinc-400">
+        <div className="space-y-4 leading-7 text-foreground/60">
           <p>
             • هر ورودی را می‌توانید مانند یک کامپوننت عادی React داخل پروژه خود
             استفاده کنید.
@@ -61,7 +63,7 @@ export default function Page() {
 
           <p>
             • برای اجرای عملکرد دلخواه کافی است پراپ{" "}
-            <code className="rounded bg-white/5 px-2 py-1 text-zinc-300">
+            <code className="rounded bg-foreground/5 px-2 py-1 text-foreground/80">
               onClick
             </code>{" "}
             را به دکمه اضافه کنید.
@@ -69,17 +71,17 @@ export default function Page() {
 
           <p>
             • برخی از کامپوننت‌ها ممکن است از{" "}
-            <span className="text-white">Framer Motion</span> استفاده کنند. در
-            این صورت می‌توانید آن را با دستور زیر نصب کنید:
+            <span className="text-foreground">Framer Motion</span> استفاده کنند.
+            در این صورت می‌توانید آن را با دستور زیر نصب کنید:
           </p>
 
           <div
             className="
               overflow-x-auto rounded-2xl
-              border border-white/10
-              bg-black/30
+              border border-foreground/10
+              bg-background/30
               px-4 py-3
-              text-sm text-zinc-300 text-left
+              text-sm text-foreground/80 text-left
             "
           >
             npm install framer-motion
@@ -114,6 +116,7 @@ export default function Page() {
       >
         <EmailInput />
       </ComponentPreview>
+
       <ComponentPreview
         title={t("FloatingLabelInput.title")}
         description={t("FloatingLabelInput.description")}

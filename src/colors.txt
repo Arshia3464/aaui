@@ -1,0 +1,22 @@
+#191117
+#21121D
+#37172F
+#37172F
+#591C47
+#692955
+#833869
+#A84885
+#D6409F
+#DE51A8
+#FF8DCC
+#FDD1EA
+
+#191117 → background
+#21121D → surface (cards, modals)
+#37172F – #591C47 → interactive bg states (ghost button rest/hover/press)
+#692955 – #833869 → borders (dividers → focused inputs)
+#D6409F → primary + accent — your one hero color, solid buttons and brand moments
+#FF8DCC → tinted text/links on dark backgrounds
+#FDD1EA → headings in tinted contexts
+
+

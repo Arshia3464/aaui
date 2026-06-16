@@ -16,31 +16,40 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/20 bg-zinc-900/20 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+    <header className="sticky top-0 z-50 border-b border-foreground/20 bg-background/20 backdrop-blur-xl">
+      <div className="px-2 flex h-16 w-full items-center justify-between px-6">
         {/* logo */}
         <div className="text-2xl font-extrabold">
           <a href="/">AAUI</a>
         </div>
 
         {/* desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
+        <nav className="hidden md:flex items-center gap-8 text-sm text-foreground/60">
           <Link
             href="/components"
-            className="hover:text-white transition-colors"
+            className="hover:text-foreground transition-colors"
           >
             {t("components")}
           </Link>
 
-          <Link href="/blocks" className="hover:text-white transition-colors">
+          <Link
+            href="/blocks"
+            className="hover:text-foreground transition-colors"
+          >
             {t("blocks")}
           </Link>
 
-          <Link href="/showcase" className="hover:text-white transition-colors">
+          <Link
+            href="/showcase"
+            className="hover:text-foreground transition-colors"
+          >
             {t("layouts")}
           </Link>
 
-          <Link href="/docs" className="hover:text-white transition-colors">
+          <Link
+            href="/docs"
+            className="hover:text-foreground transition-colors"
+          >
             {t("docs")}
           </Link>
 
@@ -53,7 +62,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen((prev) => !prev)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-foreground/10 bg-foreground/5 text-foreground"
           >
             {open ? <HiX size={22} /> : <HiOutlineMenuAlt3 size={22} />}
           </button>
@@ -63,13 +72,13 @@ export default function Navbar() {
       {/* mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-96 border-t border-white/10" : "max-h-0"
+          open ? "max-h-96 border-t border-foreground/10" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col px-6 py-5 text-sm text-zinc-400 bg-zinc-900/95 backdrop-blur-xl">
+        <nav className="flex flex-col px-6 py-5 text-sm text-foreground/60 bg-background/95 backdrop-blur-xl">
           <Link
             href="/components"
-            className="py-3 hover:text-white transition-colors"
+            className="py-3 hover:text-foreground transition-colors"
             onClick={() => setOpen(false)}
           >
             {t("components")}
@@ -77,7 +86,7 @@ export default function Navbar() {
 
           <Link
             href="/blocks"
-            className="py-3 hover:text-white transition-colors"
+            className="py-3 hover:text-foreground transition-colors"
             onClick={() => setOpen(false)}
           >
             {t("blocks")}
@@ -85,7 +94,7 @@ export default function Navbar() {
 
           <Link
             href="/layouts"
-            className="py-3 hover:text-white transition-colors"
+            className="py-3 hover:text-foreground transition-colors"
             onClick={() => setOpen(false)}
           >
             {t("layouts")}
@@ -93,7 +102,7 @@ export default function Navbar() {
 
           <Link
             href="/docs"
-            className="py-3 hover:text-white transition-colors"
+            className="py-3 hover:text-foreground transition-colors"
             onClick={() => setOpen(false)}
           >
             {t("docs")}

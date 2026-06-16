@@ -10,17 +10,19 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative z-10 mt-10 border-t border-white/10">
+    <footer className="relative z-10 mt-10 border-t border-purple-500/10">
       {/* subtle glow */}
-      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-white/2 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-purple-500/5 via-fuchsia-500/2 to-transparent" />
 
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* left */}
           <div className="text-start md:text-left">
-            <h3 className="mb-2 text-xl font-semibold">{t("title")}</h3>
+            <h3 className="mb-2 text-xl font-semibold text-white">
+              {t("title")}
+            </h3>
 
-            <p className="max-w-sm text-sm leading-6 text-zinc-500">
+            <p className="max-w-sm text-sm leading-6 text-zinc-400">
               {t("description")}
             </p>
           </div>
@@ -29,18 +31,21 @@ export default function Footer() {
           <div className="flex items-center gap-6 text-sm text-zinc-400">
             <Link
               href="/components"
-              className="transition-colors hover:text-white"
+              className="transition-colors hover:text-purple-300"
             >
               {t("links.components")}
             </Link>
 
-            <Link href="/docs" className="transition-colors hover:text-white">
+            <Link
+              href="/docs"
+              className="transition-colors hover:text-purple-300"
+            >
               {t("links.docs")}
             </Link>
 
             <Link
               href="/showcase"
-              className="transition-colors hover:text-white"
+              className="transition-colors hover:text-purple-300"
             >
               {t("links.showcase")}
             </Link>
@@ -54,10 +59,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="
                 flex h-10 w-10 items-center justify-center
-                rounded-xl border border-white/10
+                rounded-xl border border-purple-500/20
                 bg-white/5 text-zinc-400
                 backdrop-blur-md transition-all
-                hover:bg-white/10 hover:text-white
+                hover:bg-purple-500/10 hover:text-white hover:border-purple-400/30
               "
             >
               <FaGithub size={18} />
@@ -69,10 +74,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="
                 flex h-10 w-10 items-center justify-center
-                rounded-xl border border-white/10
+                rounded-xl border border-purple-500/20
                 bg-white/5 text-zinc-400
                 backdrop-blur-md transition-all
-                hover:bg-white/10 hover:text-white
+                hover:bg-purple-500/10 hover:text-white hover:border-purple-400/30
               "
             >
               <FaTelegramPlane size={18} />
@@ -84,20 +89,20 @@ export default function Footer() {
         <div
           className="
             mt-10 flex flex-col items-center justify-between
-            gap-5 border-t border-white/5
+            gap-5 border-t border-purple-500/5
             pt-6 text-sm
             md:flex-row
           "
         >
-          <p className="text-zinc-600">{t("copyright")}</p>
+          <p className="text-zinc-500">{t("copyright")}</p>
 
           <p className="flex items-center gap-2 text-zinc-400">
             ساخته شده با
-            <span className="text-red-400">♡</span>
+            <span className="text-pink-400">♡</span>
             توسط
             <span
               className="
-                bg-linear-to-r from-white to-zinc-400
+                bg-linear-to-r from-purple-300 to-fuchsia-400
                 bg-clip-text font-semibold
                 text-transparent
               "

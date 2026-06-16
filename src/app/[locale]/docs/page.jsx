@@ -36,9 +36,9 @@ export default function DocsPage() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* background blobs */}
-      <div className="absolute top-0 right-0 h-125 w-125 rounded-full bg-purple-500/20 blur-3xl" />
+      <div className="absolute top-0 right-0 h-125 w-125 rounded-full bg-accent/20 blur-3xl" />
 
-      <div className="absolute bottom-0 left-0 h-125 w-125 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="absolute bottom-0 left-0 h-125 w-125 rounded-full bg-secondary/10 blur-3xl" />
 
       {/* subtle grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
@@ -59,12 +59,12 @@ export default function DocsPage() {
           <div
             className="
               mb-6 inline-flex items-center gap-2
-              rounded-full border border-white/10
-              bg-white/5 px-4 py-1.5
-              text-sm text-zinc-300 backdrop-blur-md
+              rounded-full border border-foreground/10
+              bg-foreground/5 px-4 py-1.5
+              text-sm text-foreground/80 backdrop-blur-md
             "
           >
-            <div className="h-2 w-2 rounded-full bg-emerald-400" />
+            <div className="h-2 w-2 rounded-full bg-accent" />
             مستندات AAUI
           </div>
 
@@ -72,7 +72,7 @@ export default function DocsPage() {
             مستندات کامل برای ساخت رابط‌های مدرن
           </h1>
 
-          <p className="max-w-2xl text-lg leading-8 text-zinc-400">
+          <p className="max-w-2xl text-lg leading-8 text-foreground/60">
             نحوه استفاده از کامپوننت‌ها، انیمیشن‌ها، ساختار پروژه و الگوهای
             طراحی مدرن را یاد بگیرید و سریع‌تر رابط‌های حرفه‌ای بسازید.
           </p>
@@ -105,8 +105,8 @@ export default function DocsPage() {
                   href={section.href}
                   className="
                     group relative block h-full overflow-hidden
-                    rounded-3xl border border-white/10
-                    bg-white/[0.03] p-7
+                    rounded-3xl border border-foreground/10
+                    bg-secondary/30 p-7
                     backdrop-blur-xl
                   "
                 >
@@ -117,8 +117,8 @@ export default function DocsPage() {
                       transition-opacity duration-500
                       group-hover:opacity-100
                       bg-linear-to-br
-                      from-purple-500/10
-                      via-cyan-500/5
+                      from-accent/10
+                      via-primary/5
                       to-transparent
                     "
                   />
@@ -128,8 +128,8 @@ export default function DocsPage() {
                       className="
                         mb-6 flex h-14 w-14 items-center
                         justify-center rounded-2xl
-                        border border-white/10
-                        bg-white/5
+                        border border-foreground/10
+                        bg-foreground/5
                       "
                     >
                       <Icon className="text-xl" />
@@ -139,11 +139,11 @@ export default function DocsPage() {
                       {section.title}
                     </h3>
 
-                    <p className="mb-8 leading-7 text-zinc-400">
+                    <p className="mb-8 leading-7 text-foreground/60">
                       {section.description}
                     </p>
 
-                    <div className="flex items-center gap-2 text-sm text-zinc-300">
+                    <div className="flex items-center gap-2 text-sm text-foreground/80">
                       مشاهده
                       <FaArrowLeft className="text-xs transition-transform group-hover:-translate-x-1" />
                     </div>
@@ -160,8 +160,8 @@ export default function DocsPage() {
           <aside className="sticky top-24 h-fit">
             <div
               className="
-                rounded-3xl border border-white/10
-                bg-white/[0.03]
+                rounded-3xl border border-foreground/10
+                bg-secondary/30
                 p-6
                 backdrop-blur-xl
               "
@@ -181,10 +181,10 @@ export default function DocsPage() {
                     key={item}
                     className="
                       w-full rounded-xl px-4 py-3
-                      text-right text-zinc-400
+                      text-right text-foreground/60
                       transition-colors
-                      hover:bg-white/5
-                      hover:text-white
+                      hover:bg-foreground/5
+                      hover:text-foreground
                     "
                   >
                     {item}
@@ -199,15 +199,15 @@ export default function DocsPage() {
             {/* intro */}
             <section
               className="
-                rounded-3xl border border-white/10
-                bg-white/[0.03]
+                rounded-3xl border border-foreground/10
+                bg-secondary/30
                 p-8
                 backdrop-blur-xl
               "
             >
               <h2 className="mb-5 text-3xl font-bold">معرفی</h2>
 
-              <p className="leading-8 text-zinc-400">
+              <p className="leading-8 text-foreground/60">
                 این کتابخانه مجموعه‌ای از کامپوننت‌ها، بلاک‌ها و الگوهای طراحی
                 مدرن برای React و Next.js ارائه می‌دهد. تمامی بخش‌ها با تمرکز
                 روی تجربه توسعه‌دهنده، مقیاس‌پذیری و طراحی حرفه‌ای ساخته
@@ -218,47 +218,47 @@ export default function DocsPage() {
             {/* install */}
             <section
               className="
-                rounded-3xl border border-white/10
-                bg-white/[0.03]
+                rounded-3xl border border-foreground/10
+                bg-secondary/30
                 p-8
                 backdrop-blur-xl
               "
             >
               <h2 className="mb-6 text-3xl font-bold">نصب وابستگی‌ها</h2>
 
-              <p className="mb-6 leading-8 text-zinc-400">
+              <p className="mb-6 leading-8 text-foreground/60">
                 قبل از استفاده از کامپوننت‌ها، پکیج‌های موردنیاز را نصب کنید.
               </p>
 
               <div
                 className="
                   relative overflow-hidden rounded-2xl
-                  border border-white/10
-                  bg-black/40
+                  border border-foreground/10
+                  bg-background/40
                 "
               >
                 <div
                   className="
                     flex items-center justify-between
-                    border-b border-white/10
+                    border-b border-foreground/10
                     px-5 py-3
                   "
                 >
-                  <span className="text-sm text-zinc-500">Terminal</span>
+                  <span className="text-sm text-foreground/60">Terminal</span>
 
                   <button
                     className="
-                      rounded-lg bg-white/10
+                      rounded-lg bg-foreground/10
                       px-3 py-1 text-xs
                       transition-colors
-                      hover:bg-white/20
+                      hover:bg-foreground/20
                     "
                   >
                     Copy
                   </button>
                 </div>
 
-                <pre className="overflow-x-auto p-5 text-sm text-zinc-300">
+                <pre className="overflow-x-auto p-5 text-sm text-foreground/80">
                   {`npm install framer-motion tailwindcss react-icons`}
                 </pre>
               </div>
@@ -268,9 +268,9 @@ export default function DocsPage() {
             <section
               className="
                 relative overflow-hidden rounded-3xl
-                border border-purple-500/20
+                border border-accent/20
                 bg-gradient-to-b
-                from-purple-500/10
+                from-accent/10
                 to-transparent
                 p-8
               "
@@ -280,7 +280,7 @@ export default function DocsPage() {
                 className="
                   absolute top-0 left-1/2
                   h-60 w-60 -translate-x-1/2
-                  rounded-full bg-purple-500/10 blur-3xl
+                  rounded-full bg-accent/10 blur-3xl
                 "
               />
 
@@ -288,10 +288,10 @@ export default function DocsPage() {
                 <div
                   className="
                     mb-5 inline-flex items-center gap-2
-                    rounded-full border border-purple-500/20
-                    bg-purple-500/10
+                    rounded-full border border-accent/20
+                    bg-accent/10
                     px-4 py-1.5
-                    text-sm text-purple-200
+                    text-sm text-accent
                   "
                 >
                   ✦ محبوب‌ترین کتابخانه انیمیشن React
@@ -299,7 +299,7 @@ export default function DocsPage() {
 
                 <h2 className="mb-5 text-3xl font-bold">آموزش Framer Motion</h2>
 
-                <p className="mb-8 max-w-3xl leading-8 text-zinc-300">
+                <p className="mb-8 max-w-3xl leading-8 text-foreground/70">
                   Framer Motion یکی از قدرتمندترین کتابخانه‌های انیمیشن برای
                   React است که به شما اجازه می‌دهد انیمیشن‌های نرم، حرفه‌ای و
                   مدرن بسازید. بسیاری از کامپوننت‌های AAUI از این کتابخانه برای
@@ -310,15 +310,15 @@ export default function DocsPage() {
                 <div className="grid gap-5 md:grid-cols-2">
                   <div
                     className="
-                      rounded-2xl border border-white/10
-                      bg-black/20 p-5
+                      rounded-2xl border border-foreground/10
+                      bg-background/40 p-5
                     "
                   >
                     <h3 className="mb-3 text-xl font-semibold">
                       چه چیزهایی یاد می‌گیرید؟
                     </h3>
 
-                    <div className="space-y-3 text-zinc-400">
+                    <div className="space-y-3 text-foreground/60">
                       <p>• ساخت انیمیشن‌های ورود</p>
 
                       <p>• Hover و Tap animation</p>
@@ -333,8 +333,8 @@ export default function DocsPage() {
 
                   <div
                     className="
-                      rounded-2xl border border-white/10
-                      bg-black/20 p-5
+                      rounded-2xl border border-foreground/10
+                      bg-background/40 p-5
                     "
                   >
                     <h3 className="mb-3 text-xl font-semibold">نصب سریع</h3>
@@ -342,15 +342,15 @@ export default function DocsPage() {
                     <div
                       className="
                         overflow-hidden rounded-xl
-                        border border-white/10
-                        bg-black/40
+                        border border-foreground/10
+                        bg-background/60
                       "
                     >
-                      <div className="border-b border-white/10 px-4 py-2 text-sm text-zinc-500">
+                      <div className="border-b border-foreground/10 px-4 py-2 text-sm text-foreground/60">
                         npm
                       </div>
 
-                      <pre className="overflow-x-auto p-4 text-sm text-zinc-200">
+                      <pre className="overflow-x-auto p-4 text-sm text-foreground/80">
                         {`npm install framer-motion`}
                       </pre>
                     </div>
@@ -359,8 +359,8 @@ export default function DocsPage() {
                       href="/fa/docs/framer-motion"
                       className="
                         mt-5 inline-flex items-center gap-2
-                        rounded-xl bg-white px-5 py-3
-                        font-medium text-black
+                        rounded-xl bg-foreground px-5 py-3
+                        font-medium text-background
                         transition-transform hover:scale-[1.02]
                       "
                     >
@@ -374,15 +374,15 @@ export default function DocsPage() {
             {/* animation example */}
             <section
               className="
-                rounded-3xl border border-white/10
-                bg-white/[0.03]
+                rounded-3xl border border-foreground/10
+                bg-secondary/30
                 p-8
                 backdrop-blur-xl
               "
             >
               <h2 className="mb-6 text-3xl font-bold">مثال ساده انیمیشن</h2>
 
-              <p className="mb-6 leading-8 text-zinc-400">
+              <p className="mb-6 leading-8 text-foreground/60">
                 کامپوننت‌ها از Framer Motion برای ساخت انیمیشن‌های نرم و مدرن
                 استفاده می‌کنند.
               </p>
@@ -390,32 +390,34 @@ export default function DocsPage() {
               <div
                 className="
                   relative overflow-hidden rounded-2xl
-                  border border-white/10
-                  bg-black/40
+                  border border-foreground/10
+                  bg-background/40
                 "
               >
                 <div
                   className="
                     flex items-center justify-between
-                    border-b border-white/10
+                    border-b border-foreground/10
                     px-5 py-3
                   "
                 >
-                  <span className="text-sm text-zinc-500">Example.tsx</span>
+                  <span className="text-sm text-foreground/60">
+                    Example.tsx
+                  </span>
 
                   <button
                     className="
-                      rounded-lg bg-white/10
+                      rounded-lg bg-foreground/10
                       px-3 py-1 text-xs
                       transition-colors
-                      hover:bg-white/20
+                      hover:bg-foreground/20
                     "
                   >
                     Copy
                   </button>
                 </div>
 
-                <pre className="overflow-x-auto p-5 text-sm text-zinc-300">
+                <pre className="overflow-x-auto p-5 text-sm text-foreground/80">
                   {`<motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
@@ -429,15 +431,15 @@ export default function DocsPage() {
             {/* usage */}
             <section
               className="
-                rounded-3xl border border-white/10
-                bg-white/[0.03]
+                rounded-3xl border border-foreground/10
+                bg-secondary/30
                 p-8
                 backdrop-blur-xl
               "
             >
               <h2 className="mb-5 text-3xl font-bold">پیدا کردن کامپوننت‌ها</h2>
 
-              <p className="leading-8 text-zinc-400">
+              <p className="leading-8 text-foreground/60">
                 کامپوننت‌ها بر اساس کاربرد دسته‌بندی شده‌اند؛ مانند فرم‌ها،
                 navigation، overlay و layout ها. هر صفحه شامل پیش‌نمایش زنده،
                 سورس کد و قابلیت شخصی‌سازی است تا بتوانید سریع‌تر آن‌ها را داخل

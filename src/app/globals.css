@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
+/* =========================
+   THEME TOKENS (DEFAULT)
+========================= */
+
 :root {
-  --background: #171717;
-  --foreground: #ededed;
+  /* Base */
+  --background: #05040e;
+  --foreground: #dfddf2;
+
+  /* UI Colors */
+  --primary: #9187de;
+  --secondary: #291e7f;
+  --accent: #4e3cd9;
+
+  /* Scrollbar (optional but consistent) */
+  --scrollbar-bg: #18181b;
+  --scrollbar-thumb: #3f3f46;
+  --scrollbar-thumb-hover: #52525b;
 }
 
+/* Tailwind v4 design token mapping */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Optional dark mode override (you can later remove this when you add themes) */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --secondary: #1f1f1f;
   }
-}
+} */
+
+/* =========================
+   BASE STYLES
+========================= */
 
 body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* =========================
+   SCROLLBAR
+========================= */
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
@@ -28,23 +59,27 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #18181b; /* zinc-900 */
+  background: var(--scrollbar-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f3f46; /* zinc-700 */
+  background: var(--scrollbar-thumb);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #52525b; /* zinc-600 */
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #3f3f46 #18181b;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
 }
+
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes fade-up {
   from {
