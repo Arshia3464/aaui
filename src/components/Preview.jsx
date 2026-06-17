@@ -34,7 +34,7 @@ function CodeModal({ code, onClose }) {
           exit={{ opacity: 0, scale: 0.95, y: 10 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-3xl max-h-[80vh] overflow-hidden rounded-2xl border border-primary/20 bg-secondary/90 backdrop-blur-xl shadow-2xl"
+          className="relative w-full max-w-3xl max-h-[80vh] overflow-hidden rounded-2xl border border-primary/20 bg-foreground/5 backdrop-blur-xl shadow-2xl"
         >
           {/* Modal header */}
           <div className="flex items-center justify-between border-b border-primary/10 px-5 py-3">
@@ -111,12 +111,12 @@ export default function ComponentPreview({
         whileHover={{}}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.35, ease: "easeOut", delay: 0.5 }}
-        className="overflow-hidden rounded-sm border border-secondary/30 bg-secondary/10 backdrop-blur-xl transition-colors hover:border-primary/20"
+        className="overflow-hidden rounded-sm border border-foreground/3 bg-foreground/3 backdrop-blur-xl transition-colors hover:border-primary/20"
       >
         {/* Header */}
         {isSmall ? (
           // Small: single tight row — title on left, controls on right, never wraps
-          <div className="flex items-center justify-between gap-2 border-b border-secondary/10 px-3 py-2">
+          <div className="flex items-center justify-between gap-2 border-b border-foreground/6 px-3 py-2">
             <h3 className="truncate text-xs font-semibold text-foreground leading-none">
               {title}
             </h3>
